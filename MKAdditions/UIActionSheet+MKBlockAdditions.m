@@ -60,11 +60,11 @@ static UIViewController *_presentVC;
     if(destructiveButtonTitle)
         actionSheet.cancelButtonIndex ++;
     
-    if([view isKindOfClass:[UIView class]])
-        [actionSheet showInView:view];
-    
     if([view isKindOfClass:[UITabBar class]])
         [actionSheet showFromTabBar:(UITabBar*) view];
+    
+    if([view isKindOfClass:[UIView class]])
+        [actionSheet showInView:view];
     
     if([view isKindOfClass:[UIBarButtonItem class]])
         [actionSheet showFromBarButtonItem:(UIBarButtonItem*) view animated:YES];
